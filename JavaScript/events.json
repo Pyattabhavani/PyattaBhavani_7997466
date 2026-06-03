@@ -1,0 +1,14 @@
+[
+  {
+    "name":"Music Night",
+    "date":"2026-06-15",
+    "category":"Music",
+    "seats":50
+  },
+  {
+    "name":"Baking Workshop",
+    "date":"2026-06-20",
+    "category":"Workshop",
+    "seats":30
+  }
+]

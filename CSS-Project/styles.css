@@ -1,0 +1,246 @@
+/* Reset Default Spacing */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #f0f0f0;
+
+    padding: 20px;
+
+    line-height: 1.6;
+}
+
+/* Header Styling */
+
+#mainHeader{
+
+    background: linear-gradient(to right, #0066ff, #8000ff);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+/* Navigation Styling */
+
+nav ul{
+
+    list-style-type: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+nav li{
+
+    padding: 10px;
+}
+
+/* Link Styling */
+
+nav a{
+
+    text-decoration: none;
+
+    color: black;
+
+    font-weight: 500;
+}
+
+nav a:hover{
+
+    color: blue;
+}
+
+/* Heading Styling */
+
+h2{
+
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* Event Card Styling */
+
+.eventCard{
+
+    background-color: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid lightgray;
+
+    box-shadow: 0px 0px 5px gray;
+}
+
+/* Paragraph Styling */
+
+p{
+
+    text-align: justify;
+
+    font-size: 16px;
+}
+
+/* Table Styling */
+
+table{
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    background-color: white;
+}
+
+th, td{
+
+    border: 1px solid gray;
+
+    padding: 12px;
+
+    text-align: center;
+}
+
+th{
+
+    background-color: #007BFF;
+
+    color: white;
+}
+
+/* Zebra Striping */
+
+tr:nth-child(even){
+
+    background-color: #f2f2f2;
+}
+
+/* News Section */
+
+.newsSection{
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+    column-count: 2;
+
+    column-gap: 30px;
+
+    column-rule: 1px solid gray;
+}
+
+/* Form Section */
+
+.formSection{
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+}
+
+/* Input Styling */
+
+input{
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid gray;
+
+    border-radius: 5px;
+}
+
+/* Input Focus */
+
+input:focus{
+
+    outline: 2px solid lightblue;
+}
+
+/* Button Styling */
+
+button{
+
+    background-color: #007BFF;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+/* Button Hover */
+
+button:hover{
+
+    background-color: darkblue;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px){
+
+    nav ul{
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .newsSection{
+
+        column-count: 1;
+    }
+
+    body{
+
+        font-size: 14px;
+    }
+}

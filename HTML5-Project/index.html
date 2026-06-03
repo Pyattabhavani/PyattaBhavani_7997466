@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Local Community Event Portal</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:20px;
+        }
+
+        nav{
+            background-color:black;
+            padding:10px;
+        }
+
+        nav a{
+            color:white;
+            margin-right:20px;
+            text-decoration:none;
+        }
+
+        #welcomeBanner{
+            background-color:blue;
+            color:white;
+            padding:20px;
+            margin-top:20px;
+        }
+
+        .highlight{
+            background-color:yellow;
+            color:black;
+            padding:5px;
+        }
+
+        .eventImage{
+            border:3px solid black;
+            width:200px;
+            height:150px;
+        }
+
+        form{
+            border:1px solid gray;
+            padding:20px;
+            width:400px;
+            margin-top:20px;
+        }
+
+        table{
+            margin-top:20px;
+        }
+
+        td{
+            padding:10px;
+        }
+
+        textarea{
+            width:300px;
+            height:100px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#events">Events</a>
+
+        <a href="#contact">Contact</a>
+
+        <a href="help.html" target="_blank">
+            Help
+        </a>
+
+    </nav>
+
+    <!-- Home Section -->
+
+    <section id="home">
+
+        <div id="welcomeBanner">
+
+            <h1>
+                Welcome to Community Event Portal
+            </h1>
+
+            <p>
+
+                <span style="color:red; font-weight:bold;">
+                    Special Offer!
+                </span>
+
+                Register today.
+
+            </p>
+
+            <p class="highlight">
+                Enjoy community activities.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Events Section -->
+
+    <section id="events">
+
+        <h2>
+            Community Events
+        </h2>
+
+        <p>
+            Upcoming local events will be displayed here.
+        </p>
+
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            Email : community@gmail.com
+        </p>
+
+    </section>
+
+    <!-- Image Gallery -->
+
+    <section id="gallery">
+
+        <h2>
+            Event Gallery
+        </h2>
+
+        <table>
+
+            <tr>
+
+                <td>
+
+                    <img src="images/music.jpg"
+                        alt="Music Event"
+                        title="Music Event"
+                        class="eventImage">
+
+                    <p>
+                        Music Event
+                    </p>
+
+                </td>
+
+                <td>
+
+                    <img src="images/food.jpg"
+                        alt="Food Festival"
+                        title="Food Festival"
+                        class="eventImage">
+
+                    <p>
+                        Food Festival
+                    </p>
+
+                </td>
+
+                <td>
+
+                    <img src="images/sports.jpg"
+                        alt="Sports Event"
+                        title="Sports Event"
+                        class="eventImage">
+
+                    <p>
+                        Sports Event
+                    </p>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <img src="images/dance.jpg"
+                        alt="Dance Event"
+                        title="Dance Event"
+                        class="eventImage">
+
+                    <p>
+                        Dance Event
+                    </p>
+
+                </td>
+
+                <td>
+
+                    <img src="https://picsum.photos/204/150"
+                        alt="Art Exhibition"
+                        title="Art Exhibition"
+                        class="eventImage">
+
+                    <p>
+                        Art Exhibition
+                    </p>
+
+                </td>
+
+                <td>
+
+                    <img src="https://picsum.photos/205/150"
+                        alt="Community Meetup"
+                        title="Community Meetup"
+                        class="eventImage">
+
+                    <p>
+                        Community Meetup
+                    </p>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Registration Form -->
+
+    <section id="registration">
+
+        <h2>
+            Event Registration Form
+        </h2>
+
+        <form onsubmit="showMessage(); return false;">
+
+            <label>
+                Name:
+            </label>
+
+            <br>
+
+            <input type="text"
+                placeholder="Enter your name"
+                required
+                autofocus>
+
+            <br><br>
+
+            <label>
+                Email:
+            </label>
+
+            <br>
+
+            <input type="email"
+                placeholder="Enter your email"
+                required>
+
+            <br><br>
+
+            <label>
+                Date:
+            </label>
+
+            <br>
+
+            <input type="date"
+                required>
+
+            <br><br>
+
+            <label>
+                Event Type:
+            </label>
+
+            <br>
+
+            <select required>
+
+                <option>
+                    Music Event
+                </option>
+
+                <option>
+                    Food Festival
+                </option>
+
+                <option>
+                    Sports Event
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <label>
+                Message:
+            </label>
+
+            <br>
+
+            <textarea placeholder="Enter message"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <br><br>
+
+            <output id="result"></output>
+
+        </form>
+
+    </section>
+
+    <!-- Event Feedback -->
+
+    <section id="feedback">
+
+        <h2>
+            Event Feedback
+        </h2>
+
+        <label>
+            Phone Number:
+        </label>
+
+        <br>
+
+        <input type="text"
+            id="phone"
+            onblur="validatePhone()"
+            placeholder="Enter 10 digit number">
+
+        <p id="phoneMessage"></p>
+
+        <br>
+
+        <label>
+            Select Event:
+        </label>
+
+        <br>
+
+        <select onchange="showFee(this.value)">
+
+            <option value="">
+                Choose Event
+            </option>
+
+            <option value="500">
+                Music Event
+            </option>
+
+            <option value="300">
+                Food Festival
+            </option>
+
+            <option value="400">
+                Sports Event
+            </option>
+
+        </select>
+
+        <p id="fee"></p>
+
+        <br>
+
+        <img src="https://picsum.photos/206/150"
+            ondblclick="increaseSize(this)"
+            style="width:200px; border:2px solid black;">
+
+        <p>
+            Double click image to enlarge
+        </p>
+
+        <br>
+
+        <textarea id="feedbackText"
+            onkeyup="countCharacters()"
+            placeholder="Enter feedback">
+        </textarea>
+
+        <p>
+
+            Characters:
+
+            <span id="charCount">
+                0
+            </span>
+
+        </p>
+
+    </section>
+    <!-- Video Section -->
+
+<section id="videoSection">
+
+    <h2>
+        Event Promo Video
+    </h2>
+
+    <video width="400"
+        controls
+        oncanplay="videoReady()">
+
+        <source
+            src="videos/event.mp4"
+            type="video/mp4">
+
+    </video>
+
+    <p id="videoMessage"></p>
+
+</section>
+<!-- Local Storage -->
+
+<section id="storageSection">
+
+    <h2>
+        Save Preferred Event
+    </h2>
+
+    <input type="text"
+        id="preferredEvent"
+        placeholder="Enter favorite event">
+
+    <button onclick="savePreference()">
+        Save Preference
+    </button>
+
+    <button onclick="showPreference()">
+        Show Saved Preference
+    </button>
+
+    <p id="savedData"></p>
+
+</section>
+<!-- Geolocation -->
+
+<section id="locationSection">
+
+    <h2>
+        Find Your Location
+    </h2>
+
+    <button onclick="getLocation()">
+        Get Location
+    </button>
+
+    <p id="location"></p>
+
+</section>
+
+    <script>
+
+        function showMessage(){
+
+            document.getElementById("result").innerHTML =
+                "Registration Successful";
+
+        }
+
+        function validatePhone(){
+
+            let phone =
+                document.getElementById("phone").value;
+
+            if(phone.length != 10){
+
+                document.getElementById("phoneMessage").innerHTML =
+                    "Invalid Phone Number";
+
+            }
+            else{
+
+                document.getElementById("phoneMessage").innerHTML =
+                    "Valid Phone Number";
+
+            }
+
+        }
+
+        function showFee(value){
+
+            document.getElementById("fee").innerHTML =
+                "Event Fee: ₹" + value;
+
+        }
+
+        function increaseSize(image){
+
+            image.style.width = "400px";
+
+        }
+
+        function countCharacters(){
+
+            let text =
+                document.getElementById("feedbackText").value;
+
+            document.getElementById("charCount").innerHTML =
+                text.length;
+
+        }
+        function videoReady(){
+
+    document.getElementById("videoMessage").innerHTML =
+        "Video ready to play";
+
+}
+
+window.onbeforeunload = function(){
+
+    return "Are you sure you want to leave?";
+
+}
+function savePreference(){
+
+    let eventName =
+        document.getElementById("preferredEvent").value;
+
+    localStorage.setItem(
+        "favoriteEvent",
+        eventName
+    );
+
+    alert("Preference Saved");
+
+}
+
+function showPreference(){
+
+    let savedEvent =
+        localStorage.getItem("favoriteEvent");
+
+    document.getElementById("savedData").innerHTML =
+        "Saved Event: " + savedEvent;
+
+}
+
+function getLocation(){
+
+    if(navigator.geolocation){
+
+        navigator.geolocation.getCurrentPosition(
+            showPosition
+        );
+
+    }
+    else{
+
+        document.getElementById("location").innerHTML =
+            "Geolocation not supported";
+
+    }
+
+}
+
+function showPosition(position){
+
+    document.getElementById("location").innerHTML =
+
+        "Latitude: "
+        + position.coords.latitude
+
+        +
+
+        "<br>Longitude: "
+        + position.coords.longitude;
+
+}
+    </script>
+
+
+</body>
+
+</html>
