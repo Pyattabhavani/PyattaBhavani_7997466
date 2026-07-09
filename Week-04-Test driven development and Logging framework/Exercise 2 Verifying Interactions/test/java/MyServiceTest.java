@@ -1,0 +1,31 @@
+import org.junit.jupiter.api.Test;
+
+import static org.mockito.Mockito.*;
+
+
+public class MyServiceTest {
+
+
+    @Test
+    void testVerifyInteraction(){
+
+
+        // Create mock object
+        ExternalApi mockApi = mock(ExternalApi.class);
+
+
+        // Create service
+        MyService service = new MyService(mockApi);
+
+
+        // Call method
+        service.fetchData();
+
+
+        // Verify API method was called
+        verify(mockApi).getData();
+
+
+    }
+
+}
