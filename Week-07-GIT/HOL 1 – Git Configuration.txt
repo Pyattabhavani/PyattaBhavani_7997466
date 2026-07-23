@@ -1,0 +1,45 @@
+Step 1: Git Configuration
+git --version
+
+git config --global user.name "Your Name"
+
+git config --global user.email "your_email@example.com"
+
+git config --list
+Step 2: Configure Notepad++ as Default Editor
+notepad++
+
+git config --global core.editor "notepad++"
+
+git config -e --global
+Step 3: Create a Git Repository
+mkdir GitDemo
+
+cd GitDemo
+
+git init
+
+ls -la
+Step 4: Create a File
+notepad welcome.txt
+
+dir
+
+type welcome.txt
+Step 5: Check Repository Status
+git status
+Step 6: Add File to Staging Area
+git add welcome.txt
+Step 7: Commit the File
+git commit
+
+(Enter the commit message in the default editor.)
+
+Step 8: Verify Repository Status
+git status
+Step 9: Connect to Remote Repository
+git remote add origin <repository-url>
+Step 10: Pull from Remote Repository
+git pull origin master
+Step 11: Push to Remote Repository
+git push origin master

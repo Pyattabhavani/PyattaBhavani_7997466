@@ -1,0 +1,32 @@
+Step 1: Create a log file
+echo "Sample Log File" > sample.log
+Step 2: Create a log folder
+mkdir logs
+Step 3: Create a .gitignore file
+notepad .gitignore
+
+Add the following lines:
+
+*.log
+logs/
+
+Save and close the file.
+
+Step 4: Check Git Status
+git status
+
+The .log file and the logs folder should not appear because they are ignored.
+
+Step 5: Add the .gitignore file
+git add .gitignore
+Step 6: Commit the Changes
+git commit -m "Added .gitignore file"
+Step 7: Push to Remote Repository
+
+If your branch is main:
+
+git push origin main
+
+If your branch is master:
+
+git push origin master

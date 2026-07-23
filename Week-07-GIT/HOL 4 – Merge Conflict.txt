@@ -1,0 +1,71 @@
+Step 1: Verify Master/Main Branch is Clean
+git status
+Step 2: Create a New Branch
+git checkout -b GitWork
+Step 3: Create a File
+notepad hello.xml
+
+(Add some content and save the file.)
+
+Step 4: Check Status
+git status
+Step 5: Add and Commit the File
+git add hello.xml
+
+git commit -m "Added hello.xml in GitWork"
+Step 6: Switch to Master/Main Branch
+
+If your default branch is main:
+
+git checkout main
+
+If your default branch is master:
+
+git checkout master
+Step 7: Modify the Same File
+notepad hello.xml
+
+(Change the content differently from the branch version.)
+
+Step 8: Add and Commit the Changes
+git add hello.xml
+
+git commit -m "Updated hello.xml in main/master"
+Step 9: View Commit History
+git log --oneline --graph --decorate --all
+Step 10: Compare Changes
+git diff
+Step 11: Compare Using Diff Tool
+git difftool
+Step 12: Merge the Branch
+git merge GitWork
+
+(A merge conflict will occur.)
+
+Step 13: Resolve the Conflict
+
+Edit hello.xml to remove the conflict markers (<<<<<<<, =======, >>>>>>>) and keep the required content.
+
+Step 14: Add and Commit the Resolved File
+git add hello.xml
+
+git commit -m "Resolved merge conflict"
+Step 15: Add Backup File to .gitignore
+notepad .gitignore
+
+Add:
+
+*.bak
+
+Save the file.
+
+Step 16: Commit .gitignore
+git add .gitignore
+
+git commit -m "Updated .gitignore"
+Step 17: List Available Branches
+git branch
+Step 18: Delete the Merged Branch
+git branch -d GitWork
+Step 19: View Commit History
+git log --oneline --graph --decorate

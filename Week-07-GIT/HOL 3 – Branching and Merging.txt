@@ -1,0 +1,41 @@
+Step 1: Create a New Branch
+git branch GitNewBranch
+Step 2: List All Local and Remote Branches
+git branch -a
+Step 3: Switch to the New Branch
+git checkout GitNewBranch
+Step 4: Create a New File
+notepad sample.txt
+
+(Add some content and save the file.)
+
+Step 5: Check Git Status
+git status
+Step 6: Add the File
+git add sample.txt
+Step 7: Commit the Changes
+git commit -m "Added sample.txt in GitNewBranch"
+Step 8: Switch Back to Master/Main Branch
+
+If your branch is main:
+
+git checkout main
+
+If your branch is master:
+
+git checkout master
+Step 9: View Differences Between Branches
+git diff GitNewBranch
+Step 10: View Differences Using Diff Tool
+git difftool GitNewBranch
+Step 11: Merge the Branch
+
+If your branch is main:
+
+git merge GitNewBranch
+Step 12: View Commit History
+git log --oneline --graph --decorate
+Step 13: Delete the Branch
+git branch -d GitNewBranch
+Step 14: Verify Repository Status
+git status

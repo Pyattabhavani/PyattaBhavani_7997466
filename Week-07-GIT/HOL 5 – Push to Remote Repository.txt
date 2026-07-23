@@ -1,0 +1,28 @@
+Step 1: Check Repository Status
+git status
+Step 2: Add Modified Files
+git add .
+Step 3: Commit the Changes
+git commit -m "Updated project files"
+Step 4: Pull the Latest Changes from the Remote Repository
+
+If your default branch is main:
+
+git pull origin main
+
+If your default branch is master:
+
+git pull origin master
+Step 5: Push Changes to the Remote Repository
+
+If your default branch is main:
+
+git push origin main
+
+If your default branch is master:
+
+git push origin master
+Step 6: Verify the Push
+git log --oneline
+
+Refresh your GitHub repository in the browser to confirm that the latest commit has been uploaded successfully.
